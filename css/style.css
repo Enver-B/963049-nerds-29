@@ -1,0 +1,183 @@
+/* fonts - шрифты */
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* Variables-переменные-цвета */
+:root {
+--basic-black: #000000;
+--basic-Revell-32164: #EEEEEE;
+--basic-White: #FFFFFF;
+--basic-Fiery-Coral: #FB565A;
+--basic-RAL-240-20-05: #283136;
+--basic-Ford-Black-White-Brown: #888888;
+--basic-green: #00CA74;
+--basic-yellow: #EFC849;
+--basic-Ford-Midnight-Gray: #444444;
+--basic-Mothe-Gray: #4D4D4D;
+--basic-Krylon-Classic-Gray: #666666;
+}
+
+body {
+min-width: 960px;
+margin: 0;
+padding: 0;
+font-family: roboto;
+font-size: 16px;
+line-height: 22px;
+font-weight: normal;
+color: var(--basic-RAL-240-20-05);
+background-color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Main navigation */
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+.main-navigation-wrapper {
+  background-color: var(--basic-Revell-32164);
+}
+.site-navigation {
+  list-style: none;
+}
+.site-navigation a,
+.user-navigation a {
+  color: var(--basic-black);
+}
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: var(--basic-Mothe-Gray);
+}
+/* Features */
+.Features {
+  color: var(--basic-black);
+  text-align: left;
+}
+.Features h2 {
+  font-size: 55px;
+  line-height: 55px;
+}
+.button {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--basic-Fiery-Coral);
+  color: var(--basic-White);
+  border: none;
+}
+.main-content {
+  background-color: var(--basic-White);
+}
+services-item {
+  text-align: left;
+  color: var(--basic-RAL-240-20-05);
+}
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+.about-us {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-RAL-240-20-05);
+}
+span {
+  text-transform: uppercase;
+}
+.about-us h2 {
+  font-size: 45px;
+  line-height: 45px;
+  text-align: left;
+  color: var(--basic-black);
+}
+span .year {
+  color: var(--basic-black);
+}
+.numbers {
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+sup {
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--basic-black);
+}
+.value-numbers {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: var(--basic-RAL-240-20-05);
+}
+.footer-contacts {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: var(--basic-Krylon-Classic-Gray);
+}
+
+span .logo-name{
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align:  center;
+  color: var(--basic-black);
+}
+.footer-friendship {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: var(--basic-Ford-Midnight-Gray);
+}
+.footer-friendship h2{
+  font-size: 36px;
+  line-height: 36px;
+  text-align: left;
+  color: var(--basic-black);
+}
+.main-footer {
+background-color: var(--basic-White);
+}
+.footer-contacts a {
+  color: var(--basic-Krylon-Classic-Gray);
+  text-decoration: underline;
+}
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  text-decoration: none;
+}
+.footer-social {
+text-align: left;
+
+}
+.social-button {
+  color: inherit;
+}
+
+/* Modal */
+.modal {
+  background-color: var(--basic-White);
+}
