@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -38,11 +38,11 @@
       <h1>Интернет магазин "Nerds"</h1>
         <section class="features">
           <h2>Долго, дорого и скрупулёзно</h2>
-             Математически выверенный дизайн<br>
+             <p>Математически выверенный дизайн<br>
              для вашего сайта или мобильного приложения.</p>
           <a class="button" href="blank.html">Узнать больше</a>
           <a>
-            <img src="img/nerds-index-slide1.svg" width="760" height="431" alt="Смартфоны">
+            <img src="img/nerds-index-slide1.png" width="760" height="431" alt="Смартфоны">
           </a>
         </section>
         <div class="main-content">
@@ -83,7 +83,7 @@
               дизайн-студия из Краснодара.</h2>
                 <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
                 превыше креатива. Работаем не покладая рук, как роботы.</p>
-                <p><span>Выполняем заказы на разработку:</span></p>
+                <h3 class="about-us-tittle">Выполняем заказы на разработку:</h3>
             <ul class="about-us-list">
               <li class="about-us-item">Веб-сайты любой сложности</li>
               <li class="about-us-item">Мобильный приложений для iOS и Android</li>
@@ -92,12 +92,12 @@
               <a class="image-logo">
                 <img src="img/nerds-illustration.png" width="360" height="208" alt="Иллюстрация Nerds">
               </a>
-              <p><span class="year">С 2004 года мы любим точность во всём:</span></p>
+              <h3 class="about-us-year">С 2004 года мы любим точность во всём:</h3>
               <table class="about-us-table">
                 <tr class="numbers">
-                  <td>146<sup>%</sup></td>
-                  <td>100<sup>%</sup></td>
-                  <td>50<sup>%</sup></td>
+                  <td>146<sup class="percent">%</sup></td>
+                  <td>100<sup class="percent">%</sup></td>
+                  <td>50<sup class="percent">%</sup></td>
                 </tr>
                 <tr class="value-numbers">
                   <td>Уровень самоотдачи</td>
@@ -129,12 +129,12 @@
       <section class="footer-contacts">
         <h2>Контактная информация</h2>
         <a class="image-map">
-          <img src="img/map.jpg" width="1440" height="416" alt="Карта города">
+          <img src="img/map.png" width="1440" height="416" alt="Карта города">
         </a>
-        <p><span class='logo-name'>Nerds Design Studio</span></p>
+        <h3 class='logo-name'>Nerds Design Studio</h3>
         <p>191186, Санкт-Петербург<br>
         ул.Б.Конюшенная, д.19/8<br>
-        <a class="footer-phone"href="tel:+78122757575">тел.+7 (812) 275-75-75</a></p>
+        <a class="footer-phone" href="tel:+78122757575">тел.+7 (812) 275-75-75</a></p>
         <a class="button" href="blank.html">Напишите нам</a>
         <a class="point-map">
           <img src="img/map-marker.png" width="231" height="190" alt="Точка на карте">
@@ -160,10 +160,10 @@
       </section>
     </footer>
 
-    <section class="modal modal-basket">
+    <div class="modal modal-basket">
       <h2>Корзина</h2>
       <!-- Здесь будет форма для корзины -->
       <button class="modal-close" type="button">Закрыть</button>
-    </section>
+    </div>
   </body>
 </html>
