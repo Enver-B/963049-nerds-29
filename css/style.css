@@ -4,81 +4,144 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/roboto.eot'); /* IE9 Compat Modes */
   src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/roboto.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto.svg#Roboto') format('svg'); /* Legacy iOS */
+    url('../fonts/roboto.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/roboto.woff') format('woff'); /* Modern Browsers */
 }
-
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  scr: local('Robotobold'), local('Roboto-Bold'),
+    url('../fonts/robotobold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/robotobold.woff') format('woff'); /* Modern Browsers */
+}
+font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  scr: local('Robotomedium'), local('Roboto-Medium'),
+    url('../fonts/robotomedium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/robotomedium.woff') format('woff'); /* Modern Browsers */
+}
 /* Variables-переменные-цвета */
 :root {
---basic-black: #000000;
---basic-Revell-32164: #EEEEEE;
---basic-White: #FFFFFF;
---basic-Fiery-Coral: #FB565A;
---basic-RAL-240-20-05: #283136;
---basic-Ford-Black-White-Brown: #888888;
---basic-green: #00CA74;
---basic-yellow: #EFC849;
---basic-Ford-Midnight-Gray: #444444;
---basic-Mothe-Gray: #4D4D4D;
---basic-Krylon-Classic-Gray: #666666;
+  --basic-black: #000000;
+  --basic-black-A: #283136;
+  --basic-Revell-32164: #EEEEEE;
+  --basic-White: #FFFFFF;
+  --basic-Fiery-Coral: #FB565A;
+  --basic-Coral-B: #E74246;
+  --basic-Coral-C: #D7373B;
+  --basic-RAL-240-20-05: #283136;
+  --basic-Ford-Black-White-Brown: #888888;
+  --basic-green: #00CA74;
+  --basic-green-B: #00BC6C;
+  --basic-green-C: #00AA62;
+  --basic-yellow: #EFC849;
+  --basic-yellow-B: #EAB534;
+  --basic-yellow-C: #E5A722;
+  --basic-Ford-Midnight-Gray: #444444;
+  --basic-Mothe-Gray: #4D4D4D;
+  --basic-Krylon-Classic-Gray: #666666;
+  --basic-light-gray: #A6A6A6;
 }
 
 body {
-min-width: 960px;
-margin: 0;
-padding: 0;
-font-family: roboto;
-font-size: 16px;
-line-height: 22px;
-font-weight: normal;
-color: var(--basic-RAL-240-20-05);
-background-color: #FFFFFF;
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: var(--basic-RAL-240-20-05);
+  background-color: #FFFFFF;
 }
 
-a {
+ a {
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 /* Main navigation */
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
 }
+
 .main-navigation-wrapper {
   background-color: var(--basic-Revell-32164);
 }
-.site-navigation {
+
+.navigation-list {
   list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
 }
-.site-navigation a,
+
+.user-navigation {
+  list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: right;
+}
+.navigation-list a,
 .user-navigation a {
   color: var(--basic-black);
 }
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  background-color: var(--basic-Mothe-Gray);
+
+.navigation-list a:hover,
+.user-navigation a:hover {
+  color: var(--basic-Fiery-Coral);
 }
+.navigation-list a:focus,
+.navigation-list a:active,
+.user-navigation a:focus,
+.user-navigation a:active {
+  color: var(--basic-black);
+}
+
+
+
 /* Features */
-.Features {
+.features {
   color: var(--basic-black);
   text-align: left;
 }
-.Features h2 {
+
+.features-slogan {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-size: 55px;
   line-height: 55px;
+  font-weight: 500;
+  text-align: center;
 }
-.button {
+p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.button-red {
+  font: inherit;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
@@ -87,52 +150,106 @@ img {
   color: var(--basic-White);
   border: none;
 }
+.button-green {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--basic-green);
+  color: var(--basic-White);
+  border: none;
+}
+.button-yellow {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--basic-yellow);
+  color: var(--basic-White);
+  border: none;
+}
 .main-content {
   background-color: var(--basic-White);
 }
-services-item {
+
+.services-item {
   text-align: left;
   color: var(--basic-RAL-240-20-05);
 }
+
 .services-item h3 {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black);
 }
+
 .about-us {
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-RAL-240-20-05);
 }
+
 .about-us-tittle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
   text-transform: uppercase;
+  color: var(--basic-black-A);
 }
+
 .about-us h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
   font-size: 45px;
   line-height: 45px;
-  text-align: left;
+  text-align: center;
   color: var(--basic-black);
 }
+
 .about-us-year {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
   color: var(--basic-black);
   text-transform: uppercase;
 }
+
 .numbers {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 45px;
   line-height: 64px;
   color: var(--basic-black);
 }
+
 .percent {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 26px;
   line-height: 40px;
   color: var(--basic-black);
 }
+
 .value-numbers {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  text-align: left;
+  text-align: lcenter;
   color: var(--basic-RAL-240-20-05);
 }
+
 .footer-contacts {
   font-size: 16px;
   line-height: 18px;
@@ -140,42 +257,92 @@ services-item {
   color: var(--basic-Krylon-Classic-Gray);
 }
 
-.logo-name{
+.logo-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  text-align:  center;
+  text-align: center;
   color: var(--basic-black);
 }
+
 .footer-friendship {
   font-size: 16px;
   line-height: 22px;
   text-align: left;
   color: var(--basic-Ford-Midnight-Gray);
 }
-.footer-friendship h2{
+
+.footer-friendship h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  text-align: left;
+  text-align: center;
   color: var(--basic-black);
 }
-.main-footer {
-background-color: var(--basic-White);
+.footer-friendship-sub {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--basic-Ford-Midnight-Gray);
 }
+.main-footer {
+  background-color: var(--basic-White);
+}
+
 .footer-contacts a {
   color: var(--basic-Krylon-Classic-Gray);
   text-decoration: underline;
 }
+
 .footer-contacts a:hover,
 .footer-contacts a:focus {
   text-decoration: none;
 }
-.footer-social {
-text-align: left;
 
+.footer-social {
+  text-align: left;
 }
+
 .social-button {
   color: inherit;
+}
+
+.button-red:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-B);
+}
+.button-red:focus,
+.button-red:active {
+  color: var(--basic-Coral-B);
+  background-color: var(--basic-Coral-C);
+}
+
+.button-green:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-green-B);
+}
+.button-green:focus,
+.button-green:active {
+  color: var(--basic-green-B);
+  background-color: var(--basic-green-C);
+}
+
+.button-yellow:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-yellow-B);
+}
+.button-yellow:focus,
+.button-yellow:active {
+  color: var(--basic-yellow-B);
+  background-color: var(--basic-yellow-C);
 }
 
 /* Modal */
