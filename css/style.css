@@ -99,6 +99,7 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   text-align: right;
+
 }
 .navigation-list a,
 .user-navigation a {
@@ -109,14 +110,18 @@ img {
 .user-navigation a:hover {
   color: var(--basic-Fiery-Coral);
 }
-.navigation-list a:focus,
+
 .navigation-list a:active,
-.user-navigation a:focus,
 .user-navigation a:active {
-  color: var(--basic-black);
+color: var(--basic-black);
+opacity: 0.3;
 }
 
-
+.navigation-list a:focus,
+.user-navigation a:focus,
+ {
+  color: var(--basic-black);
+}
 
 /* Features */
 .features {
@@ -140,36 +145,29 @@ p {
   line-height: 24px;
   text-align: center;
 }
+
+.button {
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-White);
+  border: none;
+}
+
 .button-red {
-  font: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
   background-color: var(--basic-Fiery-Coral);
-  color: var(--basic-White);
-  border: none;
 }
+
 .button-green {
-  font: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
   background-color: var(--basic-green);
-  color: var(--basic-White);
-  border: none;
 }
+
 .button-yellow {
-  font: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
   background-color: var(--basic-yellow);
-  color: var(--basic-White);
-  border: none;
-}
+  }
+
 .main-content {
   background-color: var(--basic-White);
 }
@@ -179,7 +177,7 @@ p {
   color: var(--basic-RAL-240-20-05);
 }
 
-.services-item h3 {
+.services-item-title {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black);
@@ -249,6 +247,9 @@ p {
   text-align: lcenter;
   color: var(--basic-RAL-240-20-05);
 }
+.footer-phone {
+  color: var(--basic-Krylon-Classic-Gray);
+}
 
 .footer-contacts {
   font-size: 16px;
@@ -297,7 +298,7 @@ p {
   background-color: var(--basic-White);
 }
 
-.footer-contacts a {
+.footer-contacts-tittle {
   color: var(--basic-Krylon-Classic-Gray);
   text-decoration: underline;
 }
