@@ -43,14 +43,77 @@
       <h1 class="visually-hidden">Каталог</h1>
       <section  class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <div class="filter">
-          <h3 class="filter-title">Стоимость:</h2>
-           <!-- Здесь будет форма фильтра -->
-        </div>
-        <div  class="filter">
-          <h3 class="filter-title">Сортировать:</h2>
-          <!-- Здесь будет форма фильтра -->
-        </div>
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset class="filter-item">
+                <legend>Стоимость:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="
+                        width: 30%;
+                        margin-left: 20%">
+                      </div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      до <input type="number" name="max-price" value="15000">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="filter-item">
+                <legend>Сетка:</legend>
+                <ul>
+                  <li>
+                    <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+                    <label for="filter-adaptive">Адаптивная</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="grid" value="fixed" id="filter-fixed">
+                    <label for="filter-adaptive">Фиксированная</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="grid" value="rubber" id="filter-rubber">
+                    <label for="filter-adaptive">Резиновая</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter-item">
+                <legend>Особенности:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="slider" id="filter-slider" checked>
+                    <label for="filter-slider">Слайдер</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="advantages-block" id="filter-advantages-block">
+                    <label for="filter-dvantages-block">Блок преимуществ</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="news" id="filter-news" checked>
+                    <label for="filter-news">Новости</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="gallery" id="filter-gallery">
+                    <label for="filter-gallery">Галерея</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="basket" id="filter-basket">
+                    <label for="filter-basket">Корзина</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <p class="">
+                <button class="button-gray" type="button">Показать</button>
+              </p>
+            </form>
+
         </section>
         <section class="catalog">
           <h2 class="visually-hidden">Каталог товаров</h2>
