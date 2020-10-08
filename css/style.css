@@ -5,26 +5,27 @@
   font-style: normal;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'),
-    url('../fonts/roboto.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/roboto.woff') format('woff'); /* Modern Browsers */
+  url('../fonts/roboto.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/roboto.woff') format('woff'); /* Modern Browsers */
 }
+
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   src: local('Robotobold'), local('Roboto-Bold'),
-    url('../fonts/robotobold.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/robotobold.woff') format('woff'); /* Modern Browsers */
+  url('../fonts/robotobold.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/robotobold.woff') format('woff'); /* Modern Browsers */
 }
+
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   src: local('Robotomedium'), local('Roboto-Medium'),
-    url('../fonts/robotomedium.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/robotomedium.woff') format('woff'); /* Modern Browsers */
+  url('../fonts/robotomedium.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/robotomedium.woff') format('woff'); /* Modern Browsers */
 }
+
 /* Variables-переменные-цвета */
+
 :root {
   --basic-black: #000000;
   --basic-black-A: #283136;
@@ -48,14 +49,14 @@
   --basic-Krylon-Classic-Gray: #666666;
   --basic-light-gray: #A6A6A6;
   --basic-Shape-2: #E1E1E1;
-
 }
 
 body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: roboto;
+  font-style: normal;
+  font-family: "roboto", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
@@ -63,7 +64,7 @@ body {
   background-color: #FFFFFF;
 }
 
- a {
+a {
   text-decoration: none;
 }
 
@@ -101,29 +102,50 @@ img {
   align-content: start;
 }
 
+.page-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-content: start;
+}
+
 .main-header {
   background-color: var(--basic-Revell-32164);
 }
 
 .inner-page {
   background-color: var(--basic-White);
-
 }
+
 /* Main navigation */
+
 .main-navigation {
   display: grid;
-  grid-template-columns: 159.87px 1fr 75px;
-  grid-template-rows: 65.02px 65.02px;
-  margin-top: 48.98px;
+  grid-template-columns: 160px 1fr 75px;
+  grid-template-rows: 65px 65px;
+  margin-top: 20px;
   margin-left: 140px;
-  margin-right: 140.16px;
+  margin-right: 140px;
   width: 1157px;
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
 }
 
+.main-header-logo img:hover {
+  fill: var(--basic-black);
+}
+
+.main-header-logo img:focus {
+  fill: var(--basic-black);
+}
+
+.main-header-logo img:active {
+  fill: var(--basic-black);
+  opacity: 0.3;
+}
+
 .main-navigation-wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr min-content;
 }
@@ -133,11 +155,10 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 45px;
-  margin-top: 48.98px;
+  margin-top: 29px;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -147,10 +168,8 @@ img {
 }
 
 .user-navigation {
-  margin-top: 48.98px;
+  margin-top: 29px;
   list-style: none;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
@@ -170,17 +189,29 @@ img {
 
 .navigation-list a:active,
 .user-navigation a:active {
-color: var(--basic-black);
-opacity: 0.3;
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 .navigation-list a:focus,
-.user-navigation a:focus
- {
+.user-navigation a:focus {
   color: var(--basic-black);
 }
 
+.basket::before {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: 824px;
+  width: 15px;
+  height: 11px;
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 /* Features */
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -192,7 +223,6 @@ opacity: 0.3;
 
 .hero-title {
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -205,35 +235,11 @@ opacity: 0.3;
 }
 
 p {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
 }
-
-.button {
-  font: inherit;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-White);
-  border: none;
-}
-
-.button-red {
-  background-color: var(--basic-Fiery-Coral);
-}
-
-.button-green {
-  background-color: var(--basic-green);
-}
-
-.button-yellow {
-  background-color: var(--basic-yellow);
-  }
 
 .main-content {
   background-color: var(--basic-White);
@@ -257,7 +263,6 @@ ul {
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .services-item p {
@@ -281,7 +286,7 @@ ul {
   display: grid;
   margin-top: 39px;
   margin-left: 140px;
-  margin-right: 140.16px;
+  margin-right: 140px;
   grid-template-columns: 1.5fr 1fr;
   font-size: 16px;
   line-height: 24px;
@@ -289,17 +294,14 @@ ul {
 }
 
 .description-title {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
   text-align: left;
   color: var(--basic-black);
 }
+
 .description-subtitle {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -308,8 +310,6 @@ ul {
 }
 
 .description-subtitle-two {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -319,8 +319,6 @@ ul {
 }
 
 .numbers {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
@@ -328,8 +326,6 @@ ul {
 }
 
 .percent {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 40px;
@@ -337,8 +333,6 @@ ul {
 }
 
 .value-numbers {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -351,9 +345,8 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 46px;
   margin-left: 140px;
-  margin-right: 140.16px;
+  margin-right: 140px;
 }
-
 
 .footer-contacts {
   position: relative;
@@ -388,18 +381,13 @@ ul {
   background-color: var(--basic-White);
 }
 
-.footer-phone {
-  color: var(--basic-Krylon-Classic-Gray);
-}
-
 .logo-name {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 40px;
   color: var(--basic-black);
 }
 
@@ -412,47 +400,49 @@ ul {
   margin-right: 240px;
 }
 
+.footer-contacts-content .button {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 20px 40px;
+}
+
+.footer-phone {
+  color: var(--basic-Krylon-Classic-Gray);
+  line-height: 50px;
+}
+
 .footer-social-wrap {
   text-align: left;
 }
 
 .footer-social-list {
   position: relative;
-  margin-top: 68px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 68px;
+  margin: 68px auto;
   padding: 0;
 }
 
-.footer-social-item {
+.footer-social-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 81px;
   height: 81px;
   border-radius: 50%;
   background-color: var(--basic-Shape-2);
+}
 
-  }
-
-  .social-button {
-    color: inherit;
-    width: 81px;
-    height: 81px;
-  }
-
+.social-button {
+  color: inherit;
+}
 
 .footer-friendship {
-  margin-top: 68px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 74px;
+  margin: 68px auto 74px auto;
   line-height: 5px;
   text-align: left;
   color: var(--basic-Ford-Midnight-Gray);
 }
 
 .footer-friendship-title {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   text-align: left;
@@ -460,22 +450,18 @@ ul {
 }
 
 .footer-friendship-sub {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
   color: var(--basic-Ford-Midnight-Gray);
-
 }
+
 .main-footer {
   background-color: var(--basic-White);
 }
 
 .footer-contacts-tittle {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
@@ -499,10 +485,37 @@ ul {
 
 /*Buttons*/
 
+.button {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 30px;
+  font: inherit;
+  text-align: center;
+  line-height: 18px;
+  color: var(--basic-White);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-Fiery-Coral);
+  border: none;
+}
+
+.button-red {
+  background-color: var(--basic-Fiery-Coral);
+}
+
+.button-green {
+  background-color: var(--basic-green);
+}
+
+.button-yellow {
+  background-color: var(--basic-yellow);
+}
+
 .button-red:hover {
   color: var(--basic-White);
   background-color: var(--basic-Coral-B);
 }
+
 .button-red:focus,
 .button-red:active {
   color: var(--basic-Coral-B);
@@ -513,6 +526,7 @@ ul {
   color: var(--basic-White);
   background-color: var(--basic-green-B);
 }
+
 .button-green:focus,
 .button-green:active {
   color: var(--basic-green-B);
@@ -523,6 +537,7 @@ ul {
   color: var(--basic-White);
   background-color: var(--basic-yellow-B);
 }
+
 .button-yellow:focus,
 .button-yellow:active {
   color: var(--basic-yellow-B);
@@ -533,37 +548,44 @@ ul {
   color: var(--basic-White);
   background-color: var(--basic-Coral-B);
 }
-.catalog-item-price .button-red:focus ,
+
+.catalog-item-price .button-red:focus,
 .catalog-item-price .button-red:active {
-    color: var(--basic-White);
-    background-color: var(--basic-Coral-C);
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-C);
 }
 
 .button-gray:hover {
   color: var(--basic-black);
   background-color: var(--basic-Revell-B);
 }
+
 .button-gray:focus,
 .button-gray:active {
-  color: var(--basic-Revell-B);
+  color: var(--basic-black);
+  opacity: 0.3;
   background-color: var(--basic-Revell-C);
 }
 
-.social-button:hover {
-  fill: var(--basic-Coral-B);
+.social-button path:hover {
+  fill: var(--basic-White);
 }
 
-.social-button:focus,
-.social-button:active {
-  fill: var(--basic-Coral-C);
+.social-button path:focus {
+  fill: var(--basic-White);
 }
 
-.footer-social-item:hover {
+.social-button path:active {
+  fill: var(--basic-White);
+  opacity: 0.3;
+}
+
+.footer-social-item a:hover{
   background-color: var(--basic-Coral-B);
 }
 
-.footer-social-item:focus,
-.footer-social-item:active {
+.footer-social-item a:focus,
+.footer-social-item a:active{
   color: var(--basic-Coral-B);
   background-color: var(--basic-Coral-C);
 }
@@ -573,35 +595,156 @@ ul {
   background-color: var(--basic-White);
 }
 
-/*Catalog*/
-
 /*form*/
 
 form {
-  width: 360px;
-  margi-top: 55px;
-  margin-left: : 140px;
-
-
-
+  width: 260px;
+  margin-top: 55px;
+  margin-left: 140px;
   background-color: var(--basic-White);
-
 }
 
 /* filters */
 
+.filters {
+  width: 260px;
+  }
+
+.filter ul {
+  padding: 0;
+  margin: 0 0 0 42px;
+  list-style: none;
+  line-height: 30px;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0 0 45px 0;
+  border: none;
+}
+
+.filter fieldset:first-child {
+  margin-bottom: 54px;
+}
+
+.filter fieldset:nth-child(2) {
+  margin-bottom: 46px;
+}
+
+.filter fieldset:last-child {
+  margin-bottom: 50px;
+}
+
+.filter legend {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -5px;
+  width: 18px;
+  height: 18px;
+  border: 5px solid var(--basic-Revell-B);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -32px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/Oval.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  fill: var(--basic-Revell-32164);
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--basic-Revell-B);
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -38px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/Shape.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after {
+  color: var(--basic-black);
+  border-color: var(--basic-Mothe-Gray);
+  fill: var(--basic-Mothe-Gray);
+
+}
+
+.filter-input-radio:focus + label::before,
+.filter-input-radio:active + label::before,
+.filter-input-radio:focus + label::after,
+.filter-input-radio:active + label::after
+
+{
+  border-color: var(--basic-Mothe-Gray);
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.filter-input-checkbox:hover + label{
+  border-color: var(--basic-black);
+}
+
+.filter-input-checkbox:focus + label,
+.filter-input-checkbox:active + label {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.filter-button {
+  display: block;
+  margin: 0;
+  padding: 17px 90px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--basic-Revell-32164);
+  border: none;
+}
+
 .hero-title-catalog {
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   text-align: center;
   margin-top: 0;
+}
 
- .filter-title {
-  font-family: Roboto;
-  font-style: normal;
+.filter-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
@@ -612,18 +755,134 @@ form {
 
 /* Catalog */
 
- .catalog-list {
-   list-style: none;
+.catalog {
+  margin-left: 140px;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  width: 760px;
+  height: 30px;
+  margin-left: 40px;
+  padding: 55px 0;
+  }
+
+.sort-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.sort-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.sort-item {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+.sort-list  li {
+  position: relative;
+  margin-right: 25px;
+}
+
+.sort-list  li:last-child {
+  margin-right: 0;
+}
+
+.sort-item .image-triangle-1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/Shape1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  fill: var(--basic-black);
+}
+
+.sort-item .image-triangle-1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/Shape2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  fill: var(--basic-black);
+}
+
+.sort-item:hover {
+  color: var(--basic-black);
+  fill: var(--basic-black);;
+  opacity: 0.6;
+}
+
+.sort-item:focus,
+.sort-item:active {
+  color: var(--basic-black);
+  opacity: 1;
+  fill: var(--basic-black);;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
  }
 
- .catalog-item {
-   background-color: var(--basic-Mothe-Gray);
-   box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
- }
+.catalog-item {
+  position: relative;
+  width: 360px;
+  height: 618px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--basic-Revell-32164);
+  box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+  border-radius: 5px 5px 0 0;
+  }
 
- .catalog-item-title {
-  font-family: Roboto;
-  font-style: normal;
+.catalog-item-card {
+  position: absolute;
+  top: 388px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px;
+  width: 308px;
+  height: 179px;
+  background-color: var(--basic-Revell-32164);
+  display:none;
+}
+
+.catalog-item:hover {
+  background-color: var(--basic-Mothe-Gray);
+}
+
+.catalog-item:hover .catalog-item-card {
+  display: block;
+}
+
+.catalog-image {
+  position: relative;
+}
+
+.catalog-item-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
@@ -632,46 +891,106 @@ form {
   color: var(--basic-black);
 }
 
+.catalog-item-title:hover {
+  color: var(--basic-Fiery-Coral);
+}
+
+.catalog-item-title:focus,
+.catalog-item-title:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+  }
+
+.catalog-item-card .button {
+  display: block;
+  margin-left: 80px;
+  padding: 17px 50px;
+  color: var(--basic-White);
+  background-color: var(--basic-Fiery-Coral);
+}
+
+.catalog-item-card .button-red:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-B);
+}
+
+.catalog-item-card .button-red:focus,
+.catalog-item-card .button-red:active {
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-C);
+}
+
 .catalog-item-desc {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
   color: var(--basic-Krylon-Classic-Gray);
 }
-.catalog-item-price {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: var(--basic-White);
+
+.catalog-circles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 286px 13px 16px;
+  width: 50px;
+  height: 14px;
+}
+.catalog-circle {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--basic-White);
 }
 
 /* Pagination */
 
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-left: 40px;
   list-style: none;
+}
+.pagination-item {
+  margin-right: 11px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-item a {
+  display: block;
+  padding: 10px 19px;
   color: var(--basic-black);
   background-color: var(--basic-Revell-32164);
 }
 
-.pagination-item:hover {
+.pagination-item a:hover {
   color: var(--basic-black);
   background-color: var(--basic-Revell-B);
 }
 
-.pagination-item:focus,
-.pagination-item:active {
+.pagination-item a:focus,
+.pagination-item a:active {
   color: var(--basic-black);
+  opacity: 0.3;
   background-color: var(--basic-Revell-C);
 }
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--basic-black);
+  background-color: var(--basic-White);
+  border: 3px solid var(--basic-Revell-C);
+  padding: 7px 16px;
+  box-sizing: border-box;
+}
+
 
 /*filters*/
 
@@ -679,7 +998,6 @@ form {
   margin: 0;
   padding: 0;
   border: none;
-
 }
 
 .range-filter {
