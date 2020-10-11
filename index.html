@@ -47,6 +47,13 @@
           </div>
           <div class="hero-img">
             <img src="img/nerds-index-slide1.png" width="760" height="431" alt="Смартфоны">
+            <div class="hero-circles">
+              <div class="hero-circle">
+                <img src="img/Ellipse.svg" alt="элипс">
+              </div>
+              <div class="hero-circle"></div>
+              <div class="hero-circle"></div>
+            </div>
           </div>
         </section>
         <div class="main-content">
@@ -75,6 +82,9 @@
                 </li>
               </ul>
           </section>
+          <svg class="line" width="1440" height="30">
+            <line x1="140" y1="30" x2="1298" y2="30" stroke-width="2" stroke="#EEEEEE"></line>
+          </svg>
           <section class="description-text">
             <div class="description-content">
               <h2 class="description-title">Мы - маленькая, но гордая<br>
@@ -105,23 +115,37 @@
               </table>
             </div>
           </section>
+          <svg class="line" width="1440" height="50">
+            <line x1="140" y1="50" x2="1298" y2="50" stroke-width="2" stroke="#EEEEEE"></line>
+          </svg>
           <section class="manufacturers">
             <h2 class="visually-hidden">Производители</h2>
             <ul class="manufacturers-list">
               <li class="manufacturers-item">
-                <a><img src="img/Group-5.png" width="199" height="68" alt="Логотип HTMLACADEMY"></a>
+                <a href="#" class="manufacturers-logo1">
+                  <img src="img/Group-5.png" width="199" height="68" alt="Логотип HTMLACADEMY">
+                </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-image"><img src="img/logo-2.png" width="209" height="90" alt="Барбершоп Бородинский"></a>
+                <a href="#" class="manufacturers-logo2">
+                  <img src="img/logo-2.png" width="209" height="90" alt="Барбершоп Бородинский">
+                </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-image"><img src="img/logo-3.png" width="185" height="52" alt="Логотип Pink"></a>
+                <a href="#" class="manufacturers-logo3">
+                  <img src="img/logo-3.png" width="185" height="52" alt="Логотип Pink">
+                </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-image"><img src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka"></a>
+                <a href="#" class="manufacturers-logo4">
+                  <img src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka">
+                </a>
               </li>
             </ul>
           </section>
+          <svg class="line" width="1440" height="30">
+            <line x1="140" y1="30" x2="1298" y2="30" stroke-width="2" stroke="#EEEEEE"></line>
+          </svg>
         </div>
     </main>
     <footer class="page-footer main-footer">
@@ -177,11 +201,26 @@
       </div>
     </footer>
 
-
-    <div class="modal modal-basket">
-      <h2>Корзина</h2>
-      <!-- Здесь будет форма для корзины -->
-      <button class="modal-close" type="button">Закрыть</button>
-    </div>
+    <section class="modal modal-letter">
+      <h2 class="modal-title">Напишите нам</h2>
+      <form class="letter-form">
+        <ul class="letter-list">
+          <li class="letter-item">
+            <label for="name-surname">Ваше имя:</label>
+            <input class="letter-user-name" type="text" id="name-surname" name="name-surname" placeholder="Имя Фамилия" pattern="^[А-Яа-яЁё\s]+$" required>
+          </li>
+          <li class="letter-item">
+            <label for="mail">Ваш email:</label>
+            <input class="letter-user-mail" type="email" id="mail" name="mail" placeholder="email@example.com" pattern=".+@globex.com" required>
+          </li>
+          <li class="letter-item">
+            <label for="text-letter">Текст письма:</label>
+            <textarea class="letter-user-text" rows="5" cols="45" id="text-letter" name="text-letter" placeholder="В свободной форме" required></textarea>
+          </li>
+        </ul>
+        <button class="button button-red" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
   </body>
 </html>

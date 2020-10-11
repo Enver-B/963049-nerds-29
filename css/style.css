@@ -158,8 +158,6 @@ img {
   margin-top: 29px;
   margin-left: auto;
   margin-right: auto;
-  list-style: none;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
@@ -169,7 +167,6 @@ img {
 
 .user-navigation {
   margin-top: 29px;
-  list-style: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
@@ -189,13 +186,13 @@ img {
 
 .navigation-list a:active,
 .user-navigation a:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
+  color: var(--basic-Shape-2);
+  border-bottom: 2px solid var(--basic-Fiery-Coral);
+ }
 
 .navigation-list a:focus,
 .user-navigation a:focus {
-  color: var(--basic-black);
+  color: var(--basic-Shape-2);
 }
 
 .basket::before {
@@ -210,7 +207,7 @@ img {
   background-position: 0 0;
 }
 
-/* Features */
+/* hero */
 
 .hero {
   display: grid;
@@ -239,6 +236,44 @@ p {
   font-size: 16px;
   line-height: 24px;
   text-align: left;
+}
+
+.hero-img {
+  position: relative;
+  top: 5px;
+}
+
+.hero-circles {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  top: 317px;
+  left: 139px;
+  width: 88px;
+  height: 18px;
+}
+
+.hero-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--basic-White);
+}
+
+.hero-circle .ellipse {
+  position: absolute;
+  top: 102px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  background-image: url("../img/ellipse.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .main-content {
@@ -340,13 +375,74 @@ ul {
   color: var(--basic-RAL-240-20-05);
 }
 
+/* manufacturers */
+
 .manufacturers-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 46px;
   margin-left: 140px;
   margin-right: 140px;
 }
+
+.manufacturers-item::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 294px;
+  width: 2px;
+  height: 52px;
+  background-image: url("../img/Rectangle-13.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.manufacturers-item .manufacturers-logo1::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 584px;
+  width: 2px;
+  height: 52px;
+  background-image: url("../img/Rectangle-14.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.manufacturers-item .manufacturers-logo2::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 884px;
+  width: 2px;
+  height: 52px;
+  background-image: url("../img/Rectangle-15.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.manufacturers-logo1 img:hover {
+  background-image: url("../img/Group-51.png");
+}
+
+.manufacturers-logo2  img:hover {
+  background-image: url("../img/logo-21.png");
+}
+
+.manufacturers-logo3  img:hover {
+  background-image: url("../img/logo-31.png");
+}
+
+.manufacturers-logo4  img:hover {
+  background-image: url("../img/logo-41.png");
+}
+
+.manufacturers-item a:active {
+  opacity: 0.1;
+}
+
+/* footer */
 
 .footer-contacts {
   position: relative;
@@ -590,12 +686,7 @@ ul {
   background-color: var(--basic-Coral-C);
 }
 
-/* Modal */
-.modal {
-  background-color: var(--basic-White);
-}
-
-/*form*/
+/* form */
 
 form {
   width: 260px;
@@ -607,8 +698,99 @@ form {
 /* filters */
 
 .filters {
+  margin-left: 100px;
   width: 260px;
   }
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-Revell-32164);
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.min-price {
+  margin-left: 0;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}
 
 .filter ul {
   padding: 0;
@@ -646,6 +828,7 @@ form {
   display: block;
   cursor: pointer;
   user-select: none;
+  margin-left: 0;
 }
 
 .filter-input-radio + label::before {
@@ -669,7 +852,6 @@ form {
   background-image: url("../img/Oval.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  fill: var(--basic-Revell-32164);
 }
 
 .filter-input-checkbox + label::before {
@@ -695,25 +877,23 @@ form {
 }
 
 .filter-input-radio:hover + label::before,
-.filter-input-radio:hover + label::after {
+.filter-input-radio:hover + label::after{
   color: var(--basic-black);
-  border-color: var(--basic-Mothe-Gray);
-  fill: var(--basic-Mothe-Gray);
+  border-color: var(--basic-black);
+  fill: var(--basic-black);
 
 }
 
-.filter-input-radio:focus + label::before,
-.filter-input-radio:active + label::before,
-.filter-input-radio:focus + label::after,
-.filter-input-radio:active + label::after
-
-{
+.filter-input-radio:focus + label,
+.filter-input-radio:active + label {
   border-color: var(--basic-Mothe-Gray);
-  color: var(--basic-black);
+  color: var(--basic-Mothe-Gray);
+  fill: var(--basic-Mothe-Gray);
   opacity: 0.3;
 }
 
-.filter-input-checkbox:hover + label{
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:hover + label::after {
   border-color: var(--basic-black);
 }
 
@@ -756,7 +936,7 @@ form {
 /* Catalog */
 
 .catalog {
-  margin-left: 140px;
+  margin-left: 280px;
 }
 
 .sort {
@@ -765,7 +945,7 @@ form {
   width: 760px;
   height: 30px;
   margin-left: 40px;
-  padding: 55px 0;
+  padding: 50px 0;
   }
 
 .sort-title {
@@ -991,91 +1171,140 @@ form {
   box-sizing: border-box;
 }
 
+/* Modal */
 
-/*filters*/
-
-.filter-item {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.range-filter {
-  width: 260px;
-  margin-top: 49px;
-}
-
-.filter-item legend {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.range-controls {
-  position: relative;
-  height: 41px;
-  margin-bottom: 15px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: var(--basic-Revell-32164);
-  border-radius: 5px;
-}
-
-.range-controls .scale {
-  height: 2px;
-  background: #d7dcde;
-}
-
-.range-controls .bar {
-  width: 70%;
-  height: 2px;
-  background: #00ca74;
-}
-
-.range-controls .toggle {
-  position: absolute;
-  top: 31px;
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-  cursor: pointer;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--basic-White);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.range-controls .toggle-min {
-  left: 18px;
+.modal-letter {
+  top: 50px;
+  bottom: 194px;
+  width: 960px;
+  height: 400px;
+  padding: 50px 80px;
 }
 
-.range-controls .toggle-max {
-  left: 160px;
+.modal-letter h2 {
+  margin-top: -20px;
+  margin-left: 80px;
+  width: 500px;
+  left: 50px;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
 }
 
-.price-controls {
+label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  display: block;
+  margin-top: 25px;
+  margin-left: -40px;
+  margin-bottom: 10px;
+}
+
+.letter-form {
+  width: 761px;
+  height: 353px;
+  margin-top: -20px;
+  margin-left: 80px;
+}
+
+.letter-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 720px;
+  height: 305px;
+  margin: 0;
 }
 
-.price-controls label {
-  text-transform: uppercase;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 16px;
+.letter-user-name,
+.letter-user-mail  {
+  width: 340px;
+  height: 34px;
+  padding-left: 10px;
+  margin-left: -40px;
+  border-radius: 3px 3px 3px 3px;
+  border: 2px solid var(--basic-light-gray);
 }
 
-.price-controls input {
-  width: 60px;
-  padding: 10px;
-  margin-left: 10px;
-  text-align: center;
-  color: #283136;
-  border: none;
-  border-radius: 5px;
-  background: #f1f1f1;
-  font-family: inherit;
-  font-size: inherit;
+.letter-user-text {
+  width: 744px;
+  height: 118px;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 3px 3px 3px 3px;
+  border: 2px solid var(--basic-light-gray);
+  resize: none;
+}
+
+.letter-user-name:focus:invalid,
+.letter-user-text:focus:invalid {
+  color: var(--basic-Coral-C);
+  box-shadow: 0 0 5px var(--basic-Coral-C);
+  border: 2px solid var(--basic-Coral-C);
+}
+
+.letter-form button{
+display: block;
+padding: 15px 70px;
+color: var(--basic-White);
+background-color: var(--basic-Fiery-Coral);
+border-radius: 3px 3px 3px 3px;
+}
+
+.modal-close {
+position: absolute;
+top: 40px;
+right: 190px;
+width: 22px;
+height: 22px;
+background-color: transparent;
+border: 0;
+cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+content: "";
+position: absolute;
+top: 10px;
+right: -5px;
+width: 29px;
+height: 3px;
+background-color: rgba(251, 86, 90, 0.3);
+}
+
+.modal-close::before {
+transform: rotate(45deg);
+}
+
+.modal-close::after {
+transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after {
+background-color: var(--basic-Fiery-Coral);
+}
+
+.modal-close:focus::before,
+.modal-close:focus::after,
+.modal-close:active::before,
+.modal-close:active::after {
+ background-color: rgba(251, 86, 90, 0.3);
 }
