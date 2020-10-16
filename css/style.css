@@ -61,7 +61,7 @@ body {
   line-height: 22px;
   font-weight: normal;
   color: var(--basic-RAL-240-20-05);
-  background-color: #FFFFFF;
+  background-color: var(--basic-White);
 }
 
 a {
@@ -87,7 +87,7 @@ img {
 }
 
 /* Grid */
-
+/*
 .page {
   height: 100%;
 }
@@ -115,9 +115,9 @@ img {
 .inner-page {
   background-color: var(--basic-White);
 }
-
+*/
 /* Main navigation */
-
+/*
 .main-navigation {
   display: grid;
   grid-template-columns: 160px 1fr 75px;
@@ -131,18 +131,6 @@ img {
   color: var(--basic-black);
 }
 
-.main-header-logo img:hover {
-  fill: var(--basic-black);
-}
-
-.main-header-logo img:focus {
-  fill: var(--basic-black);
-}
-
-.main-header-logo img:active {
-  fill: var(--basic-black);
-  opacity: 0.3;
-}
 
 .main-navigation-wrapper {
   position: relative;
@@ -208,7 +196,7 @@ img {
 }
 
 /* hero */
-
+/*
 .hero {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -276,6 +264,7 @@ p {
   background-position: 0 0;
 }
 
+
 .main-content {
   background-color: var(--basic-White);
 }
@@ -316,7 +305,8 @@ ul {
   line-height: 30px;
   color: var(--basic-black);
 }
-
+*/
+/*
 .description-text {
   display: grid;
   margin-top: 39px;
@@ -374,9 +364,9 @@ ul {
   text-align: left;
   color: var(--basic-RAL-240-20-05);
 }
-
+*/
 /* manufacturers */
-
+/*
 .manufacturers-list {
   position: relative;
   display: grid;
@@ -441,9 +431,9 @@ ul {
 .manufacturers-item a:active {
   opacity: 0.1;
 }
-
+*/
 /* footer */
-
+/*
 .footer-contacts {
   position: relative;
   top: 80px;
@@ -580,7 +570,7 @@ ul {
 }
 
 /*Buttons*/
-
+/*
 .button {
   display: inline-block;
   margin-right: 16px;
@@ -594,51 +584,10 @@ ul {
   background-color: var(--basic-Fiery-Coral);
   border: none;
 }
+*/
 
-.button-red {
-  background-color: var(--basic-Fiery-Coral);
-}
 
-.button-green {
-  background-color: var(--basic-green);
-}
-
-.button-yellow {
-  background-color: var(--basic-yellow);
-}
-
-.button-red:hover {
-  color: var(--basic-White);
-  background-color: var(--basic-Coral-B);
-}
-
-.button-red:focus,
-.button-red:active {
-  color: var(--basic-Coral-B);
-  background-color: var(--basic-Coral-C);
-}
-
-.button-green:hover {
-  color: var(--basic-White);
-  background-color: var(--basic-green-B);
-}
-
-.button-green:focus,
-.button-green:active {
-  color: var(--basic-green-B);
-  background-color: var(--basic-green-C);
-}
-
-.button-yellow:hover {
-  color: var(--basic-White);
-  background-color: var(--basic-yellow-B);
-}
-
-.button-yellow:focus,
-.button-yellow:active {
-  color: var(--basic-yellow-B);
-  background-color: var(--basic-yellow-C);
-}
+/*
 
 .catalog-item-price .button-red:hover {
   color: var(--basic-White);
@@ -685,9 +634,9 @@ ul {
   color: var(--basic-Coral-B);
   background-color: var(--basic-Coral-C);
 }
-
+*/
 /* form */
-
+/*
 form {
   width: 260px;
   margin-top: 55px;
@@ -696,7 +645,7 @@ form {
 }
 
 /* filters */
-
+/*
 .filters {
   margin-left: 100px;
   width: 260px;
@@ -932,9 +881,9 @@ form {
   text-transform: uppercase;
   color: var(--basic-black);
 }
-
+*/
 /* Catalog */
-
+/*
 .catalog {
   margin-left: 280px;
 }
@@ -1123,9 +1072,9 @@ form {
   border-radius: 50%;
   background-color: var(--basic-White);
 }
-
+*/
 /* Pagination */
-
+/*
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
@@ -1170,9 +1119,9 @@ form {
   padding: 7px 16px;
   box-sizing: border-box;
 }
-
+*/
 /* Modal */
-
+/*
 .modal {
   display: none;
   position: fixed;
@@ -1260,51 +1209,322 @@ label {
 }
 
 .letter-form button{
-display: block;
-padding: 15px 70px;
-color: var(--basic-White);
-background-color: var(--basic-Fiery-Coral);
-border-radius: 3px 3px 3px 3px;
+  display: block;
+  padding: 15px 70px;
+  color: var(--basic-White);
+  background-color: var(--basic-Fiery-Coral);
+  border-radius: 3px 3px 3px 3px;
 }
 
 .modal-close {
-position: absolute;
-top: 40px;
-right: 190px;
-width: 22px;
-height: 22px;
-background-color: transparent;
-border: 0;
-cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 190px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .modal-close::before,
 .modal-close::after {
-content: "";
-position: absolute;
-top: 10px;
-right: -5px;
-width: 29px;
-height: 3px;
-background-color: rgba(251, 86, 90, 0.3);
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  width: 29px;
+  height: 3px;
+  background-color: rgba(251, 86, 90, 0.3);
 }
 
 .modal-close::before {
-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .modal-close::after {
-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .modal-close:hover::before,
 .modal-close:hover::after {
-background-color: var(--basic-Fiery-Coral);
+  background-color: var(--basic-Fiery-Coral);
 }
 
 .modal-close:focus::before,
 .modal-close:focus::after,
 .modal-close:active::before,
 .modal-close:active::after {
- background-color: rgba(251, 86, 90, 0.3);
+  background-color: rgba(251, 86, 90, 0.3);
+}
+*/
+
+
+/* header #2*/
+
+.header {
+  padding-top: 49px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: var(--basic-Revell-32164);
+}
+
+.header-container {
+  max-width: 1177px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header-logo img:hover {
+  fill: var(--basic-black);
+}
+
+.header-logo img:focus {
+  fill: var(--basic-black);
+}
+
+.header-logo img:active {
+  fill: var(--basic-black);
+  opacity: 0.3;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin-left: 45px;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item a,
+.user-nav a {
+  color: var(--basic-black);
+}
+
+.nav-list a,
+.user-nav a {
+  color: var(--basic-black);
+}
+
+.nav-list a:hover,
+.user-nav a:hover {
+  color: var(--basic-Fiery-Coral);
+}
+
+.nav-list a:active,
+.user-nav a:active {
+  color: var(--basic-Shape-2);
+  border-bottom: 2px solid var(--basic-Fiery-Coral);
+}
+
+.nav-list a:focus,
+.user-nav a:focus {
+  color: var(--basic-Shape-2);
+}
+
+.basket::before {
+  content: "";
+  position: absolute;
+  top: 82px;
+  left: 1245px;
+  width: 15px;
+  height: 11px;
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+ /* container */
+
+ /* section-hero #2*/
+
+.hero-container {
+  background-color: var(--basic-Revell-32164);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1177px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  margin-top: 0;
+  color: var(--basic-black);
+}
+
+.hero-desc p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black-A);
+}
+
+.hero-desc .button {
+  padding: 17px 54px 15px 54px;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-circles {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  top: 317px;
+  left: 139px;
+  width: 88px;
+  height: 18px;
+}
+
+.hero-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--basic-White);
+}
+
+.hero-circle .ellipse {
+  position: absolute;
+  top: 102px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  background-image: url("../img/ellipse.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* buttons */
+
+.button {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-White);
+  border: none;
+  border-radius: 3px;
+}
+
+.button-red {
+  background-color: var(--basic-Fiery-Coral);
+}
+
+
+.button-green {
+  background-color: var(--basic-green);
+}
+
+.button-yellow {
+  background-color: var(--basic-yellow);
+}
+
+.button-red:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-B);
+}
+
+.button-red:focus,
+.button-red:active {
+  color: var(--basic-Coral-B);
+  background-color: var(--basic-Coral-C);
+}
+
+.button-green:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-green-B);
+}
+
+.button-green:focus,
+.button-green:active {
+  color: var(--basic-green-B);
+  background-color: var(--basic-green-C);
+}
+
+.button-yellow:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-yellow-B);
+}
+
+.button-yellow:focus,
+.button-yellow:active {
+  color: var(--basic-yellow-B);
+  background-color: var(--basic-yellow-C);
+}
+
+/* services #2 */
+
+.services-container {
+  position: relative;
+  max-width: 1177px;
+  width: 100%;
+  margin: 80px auto;
+  padding: 0 0;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 0 0;
+  list-style-type: none;
+}
+
+.services-item-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.services-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black-A);
+}
+
+.services-item .button {
+  padding: 17px 40px 15px 39px;
+}
+
+.services-container::after {
+  content: "";
+  position: absolute;
+  top: 427px;
+  left: 0;
+  width: 1158px;
+  height: 2px;
+  background-color: var(--basic-Revell-32164);
 }
