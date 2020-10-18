@@ -36,7 +36,6 @@
   --basic-Fiery-Coral: #FB565A;
   --basic-Coral-B: #E74246;
   --basic-Coral-C: #D7373B;
-  --basic-RAL-240-20-05: #283136;
   --basic-Ford-Black-White-Brown: #888888;
   --basic-green: #00CA74;
   --basic-green-B: #00BC6C;
@@ -60,7 +59,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
-  color: var(--basic-RAL-240-20-05);
+  color: var(--basic-black-A);
   background-color: var(--basic-White);
 }
 
@@ -1350,7 +1349,9 @@ label {
 
  /* container */
 
- /* section-hero #2*/
+.container {}
+
+ /* section-hero */
 
 .hero-container {
   background-color: var(--basic-Revell-32164);
@@ -1441,7 +1442,6 @@ label {
   background-color: var(--basic-Fiery-Coral);
 }
 
-
 .button-green {
   background-color: var(--basic-green);
 }
@@ -1483,7 +1483,7 @@ label {
   background-color: var(--basic-yellow-C);
 }
 
-/* services #2 */
+/* section-services */
 
 .services-container {
   position: relative;
@@ -1527,4 +1527,295 @@ label {
   width: 1158px;
   height: 2px;
   background-color: var(--basic-Revell-32164);
+}
+
+/* section-text */
+
+.text-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1177px;
+  width: 100%;
+  margin: 121px auto 73px auto;
+  padding: 0 0;
+}
+
+.text-title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.text-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--basic-black-A);
+}
+
+.text-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-list {
+  list-style-type: none;
+}
+
+.text-desc .text-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.text-paragraph {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black-A);
+}
+
+ul .text-paragraph {
+  position: relative;
+}
+
+ul .text-paragraph::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -32px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-Fiery-Coral);
+}
+
+.text-table h3 {
+  color: var(--basic-black);
+}
+
+.row-first .text-list {
+  display: flex;
+  justify-content: space-between;
+  width: 374px;
+  padding: 0;
+}
+
+.row-last .text-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 374px;
+  padding: 0;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+.percent {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.result {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black-A);
+}
+
+.text-container::after {
+  content: "";
+  position: absolute;
+  top: 500px;
+  left: 0;
+  width: 1158px;
+  height: 2px;
+  background-color: var(--basic-Revell-32164);
+}
+
+/* section-project */
+
+.project-container {
+  position: relative;
+  max-width: 1177px;
+  width: 100%;
+  margin: 121px auto 44px auto;
+  padding: 0 0;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-item .project-logo1,
+.project-item .project-logo2,
+.project-item .project-logo4,
+.project-item .project-logo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-list li {
+  position: relative;
+}
+
+.project-list li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 52px;
+  background-color: var(--basic-Revell-32164);
+}
+
+.project-list li.first::after {
+  display: none;
+}
+
+.project-container::after {
+  content: "";
+  position: absolute;
+  top: 134px;
+  left: 0;
+  width: 1158px;
+  height: 2px;
+  background-color: var(--basic-Revell-32164);
+}
+
+/* footer */
+
+.footer-container {
+  
+  width: 100%;
+  margin-top: 126px;
+  padding: 0 0;
+
+}
+
+.footer-contacts {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  background-size: 100%;
+}
+
+.footer-contacts-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 54px;
+  left: 140px;
+  bottom: 54px;
+  width: 319px;
+  height: 308px;
+  text-align: right;
+  background-color: var(--basic-White);
+}
+
+.footer-point-wrap {
+  position: absolute;
+  left: 822px;
+  top: 80px;
+  width: 231px;
+  height: 190px;
+}
+
+.logo-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.footer-contacts-tittle,
+.footer-phone {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: var(--basic-Krylon-Classic-Gray);
+}
+
+.footer-contacts-tittle {
+  margin: 18px auto;
+}
+
+.footer-contacts-content .button {
+  padding: 17px 44px 15px 44px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1100px;
+  height: 81px;
+  padding: 68px 0;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  width: 261px;
+}
+
+.footer-social-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: var(--basic-Shape-2);
+}
+
+.social-button path:hover,
+.social-button path:focus {
+  fill: var(--basic-White);
+}
+
+.social-button path:active {
+  fill: var(--basic-White);
+  opacity: 0.3;
+}
+
+.footer-social-item a:hover{
+  background-color: var(--basic-Coral-B);
+}
+
+.footer-social-item a:focus,
+.footer-social-item a:active{
+  color: var(--basic-Coral-B);
+  background-color: var(--basic-Coral-C);
+}
+
+.footer-friendship-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+.footer-friendship-sub {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-Ford-Midnight-Gray);
 }
