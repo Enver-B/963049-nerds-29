@@ -11,7 +11,7 @@
     <header class="header">
       <div class="header-container">
         <nav class="nav">
-        <a class="header-logo">
+        <a href="#" class="header-logo">
           <img src="img/nerds-logo.svg" width="159" height="65" alt="Логотип Нёрдс">
         </a>
         <div class="nav-wrapper">
@@ -37,9 +37,8 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <div class="hero-container">
-        <section class="hero">
+       <div class="hero">
+        <section class="hero-content container">
           <div class="hero-desc">
             <h2 class="hero-title">Долго, дорого,<br> и скрупулёзно</h2>
             <p>Математически выверенный дизайн<br>
@@ -49,16 +48,25 @@
           <div class="hero-img">
             <img src="img/nerds-index-slide1.png" width="760" height="431" alt="Смартфоны">
             <div class="hero-circles">
-              <div class="hero-circle">
-                <img src="img/Ellipse.svg" alt="элипс">
-              </div>
-              <div class="hero-circle"></div>
-              <div class="hero-circle"></div>
+                <ul class="circles-list">
+                  <li class="circle-item">
+                    <input class="visually-hidden circle-input-radio" type="radio" name="circle" value="circle-one" id="circle-one" checked>
+                    <label for="circle-one"></label>
+                  </li>
+                  <li class="circle-item">
+                    <input class="visually-hidden circle-input-radio" type="radio" name="circle" value="circle-two" id="circle-two">
+                    <label for="circle-two"></label>
+                  </li>
+                  <li class="circle-item">
+                    <input class="visually-hidden circle-input-radio" type="radio" name="circle" value="circle-three" id="circle-three">
+                    <label for="circle-three"></label>
+                  </li>
+                </ul>
             </div>
           </div>
         </section>
         </div>
-        <section class="services-container">
+        <section class="services container">
             <ul class="services-list">
               <li class="services-item">
                 <img src="img/illustration-1.png" width="300" height="146" alt="Иллюстрация Веб-сайты">
@@ -83,7 +91,7 @@
               </li>
             </ul>
         </section>
-        <section class="text-container">
+        <section class="text container">
            <div class="text-content">
              <div class="text-slogan">
                 <h2 class="text-title">Мы - маленькая, но гордая<br>
@@ -123,8 +131,8 @@
               </div>
            </div>
         </section>
-        <section class="project-container">
-          <div class="project">
+        <section class="project container">
+          <div class="project-content">
             <ul class="project-list">
               <li class="project-item first">
                 <a href="#" class="project-logo1">
@@ -149,12 +157,13 @@
             </ul>
           </div>
         </section>
-      </div>
+
     </main>
     <footer class="footer">
-      <div class="footer-container">
+      <div class="footer-content">
         <div class="footer-contacts">
-          <img src="img/map.png" width="1440" height="416" alt="Карта города">
+          <img src="img/map.png" width="100%" height="416" alt="Карта города">
+
           <div class="footer-contacts-content">
             <h3 class='logo-name'>Nerds Design Studio</h3>
             <address class="footer-contacts-tittle"> 191186, Санкт-Петербург,<br>
@@ -168,8 +177,9 @@
               <img src="img/map-marker.png" width="231" height="190" alt="Точка на карте">
             </a>
           </div>
+
         </div>
-        <div class="footer-social">
+        <div class="footer-social container ">
           <div class="footer-social-wrap">
             <ul class="footer-social-list">
               <li class="footer-social-item">

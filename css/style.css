@@ -67,10 +67,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  /*height: auto;*/
-}
+
 
 .visually-hidden {
   position: absolute;
@@ -1335,36 +1332,42 @@ label {
   color: var(--basic-Shape-2);
 }
 
+.user-nav {
+  position: relative;
+}
+
 .basket::before {
   content: "";
   position: absolute;
-  top: 82px;
-  left: 1245px;
+  top: 6px;
+  left: -25px;
   width: 15px;
-  height: 11px;
-  background-image: url("../img/basket.svg");
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
 }
 
  /* container */
 
-.container {}
-
- /* section-hero */
-
-.hero-container {
-  background-color: var(--basic-Revell-32164);
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container {
   max-width: 1177px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0;
+  padding: 0 10px;
+}
+
+
+ /* section-hero */
+
+.hero{
+  background-color: var(--basic-Revell-32164);
+}
+
+.hero-content  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero-title {
@@ -1386,10 +1389,36 @@ label {
 }
 
 .hero-img {
+  display: flex;
   position: relative;
 }
 
-.hero-circles {
+.circle-input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--basic-White);
+  cursor: pointer;
+}
+
+.circle-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/ellipse.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+.circles-list {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -1400,26 +1429,13 @@ label {
   height: 18px;
 }
 
-.hero-circle {
+.circle-item {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
-  background-color: var(--basic-White);
-}
-
-.hero-circle .ellipse {
-  position: absolute;
-  top: 102px;
-  left: 12px;
-  width: 8px;
-  height: 8px;
-  background-image: url("../img/ellipse.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 /* buttons */
@@ -1485,12 +1501,9 @@ label {
 
 /* section-services */
 
-.services-container {
+.services {
   position: relative;
-  max-width: 1177px;
-  width: 100%;
   margin: 80px auto;
-  padding: 0 0;
 }
 
 .services-list {
@@ -1519,7 +1532,7 @@ label {
   padding: 17px 40px 15px 39px;
 }
 
-.services-container::after {
+.services::after {
   content: "";
   position: absolute;
   top: 427px;
@@ -1531,15 +1544,12 @@ label {
 
 /* section-text */
 
-.text-container {
+.text {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1177px;
-  width: 100%;
   margin: 121px auto 73px auto;
-  padding: 0 0;
 }
 
 .text-title {
@@ -1630,7 +1640,7 @@ ul .text-paragraph::after {
   color: var(--basic-black-A);
 }
 
-.text-container::after {
+.text::after {
   content: "";
   position: absolute;
   top: 500px;
@@ -1642,12 +1652,9 @@ ul .text-paragraph::after {
 
 /* section-project */
 
-.project-container {
+.project-content {
   position: relative;
-  max-width: 1177px;
-  width: 100%;
   margin: 121px auto 44px auto;
-  padding: 0 0;
 }
 
 .project-list {
@@ -1684,7 +1691,7 @@ ul .text-paragraph::after {
   display: none;
 }
 
-.project-container::after {
+.project-content::after {
   content: "";
   position: absolute;
   top: 134px;
@@ -1694,20 +1701,43 @@ ul .text-paragraph::after {
   background-color: var(--basic-Revell-32164);
 }
 
+.project-logo1 img:hover {
+  background-image: url("../img/Group-51.png");
+}
+
+.project-logo2  img:hover {
+  background-image: url("../img/logo-21.png");
+}
+
+.project-logo3  img:hover {
+  background-image: url("../img/logo-31.png");
+}
+
+.project-logo4  img:hover {
+  background-image: url("../img/logo-41.png");
+}
+
+.project-item a:active {
+  opacity: 0.1;
+}
+
 /* footer */
 
-.footer-container {
-  
-  width: 100%;
+.footer-content {
   margin-top: 126px;
-  padding: 0 0;
-
 }
+
+
 
 .footer-contacts {
   position: relative;
   display: flex;
-  max-width: 100%;
+  width: 100%;
+  background-size: 100%;
+}
+
+.footer-contacts img {
+  width: 100%;
   background-size: 100%;
 }
 
@@ -1718,7 +1748,7 @@ ul .text-paragraph::after {
   align-items: center;
   position: absolute;
   top: 54px;
-  left: 140px;
+  left: 160px;
   bottom: 54px;
   width: 319px;
   height: 308px;
@@ -1728,8 +1758,8 @@ ul .text-paragraph::after {
 
 .footer-point-wrap {
   position: absolute;
-  left: 822px;
-  top: 80px;
+  left: 870px;
+  top: 85px;
   width: 231px;
   height: 190px;
 }
@@ -1765,13 +1795,13 @@ ul .text-paragraph::after {
   justify-content: space-around;
   align-items: center;
   width: 1100px;
-  height: 81px;
   padding: 68px 0;
+  margin-left: 80px;
 }
 
 .footer-social-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0;
   width: 261px;
@@ -1807,15 +1837,21 @@ ul .text-paragraph::after {
   background-color: var(--basic-Coral-C);
 }
 
+.footer-friendship {
+
+}
 .footer-friendship-title {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-black);
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .footer-friendship-sub {
   font-size: 16px;
   line-height: 22px;
+  margin-top: 16px;
   color: var(--basic-Ford-Midnight-Gray);
 }
