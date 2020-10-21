@@ -67,8 +67,6 @@ a {
   text-decoration: none;
 }
 
-
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1357,7 +1355,6 @@ label {
   padding: 0 10px;
 }
 
-
  /* section-hero */
 
 .hero{
@@ -1371,10 +1368,10 @@ label {
 }
 
 .hero-title {
+  margin-top: 0;
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  margin-top: 0;
   color: var(--basic-black);
 }
 
@@ -1389,8 +1386,8 @@ label {
 }
 
 .hero-img {
-  display: flex;
   position: relative;
+  display: flex;
 }
 
 .circle-input-radio + label::before {
@@ -1422,18 +1419,18 @@ label {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  padding: 0;
   top: 317px;
   left: 139px;
   width: 88px;
   height: 18px;
+  padding: 0;
 }
 
 .circle-item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   width: 18px;
   height: 18px;
 }
@@ -1443,12 +1440,12 @@ label {
 .button {
   display: inline-block;
   padding: 0;
-  text-align: center;
-  vertical-align: middle;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
+  vertical-align: middle;
   color: var(--basic-White);
   border: none;
   border-radius: 3px;
@@ -1501,7 +1498,7 @@ label {
 
 /* section-services */
 
-.services {
+.services-wrap {
   position: relative;
   margin: 80px auto;
 }
@@ -1532,7 +1529,7 @@ label {
   padding: 17px 40px 15px 39px;
 }
 
-.services::after {
+.services-wrap::after {
   content: "";
   position: absolute;
   top: 427px;
@@ -1544,7 +1541,7 @@ label {
 
 /* section-text */
 
-.text {
+.text-content {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -1640,7 +1637,7 @@ ul .text-paragraph::after {
   color: var(--basic-black-A);
 }
 
-.text::after {
+.text-content::after {
   content: "";
   position: absolute;
   top: 500px;
@@ -1660,8 +1657,9 @@ ul .text-paragraph::after {
 .project-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
+
 }
 
 .project-item .project-logo1,
@@ -1727,49 +1725,55 @@ ul .text-paragraph::after {
   margin-top: 126px;
 }
 
-
-
 .footer-contacts {
   position: relative;
-  display: flex;
   width: 100%;
   background-size: 100%;
 }
 
 .footer-contacts img {
+  position: absolute;
   width: 100%;
   background-size: 100%;
+  z-index: -1;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 54px;
+  width: 65%;
+
 }
 
 .footer-contacts-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 54px;
-  left: 160px;
-  bottom: 54px;
-  width: 319px;
-  height: 308px;
-  text-align: right;
+  display: inline-block;
+  padding: 49px 39px 47px 50px;
   background-color: var(--basic-White);
 }
 
 .footer-point-wrap {
-  position: absolute;
-  left: 870px;
-  top: 85px;
+  display: inline-block;
+  padding-top: 32px;
+}
+
+.footer-point-wrap img {
   width: 231px;
-  height: 190px;
 }
 
 .logo-name {
+  margin-top: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+}
+
+.footer-phone {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-contacts-tittle,
@@ -1787,24 +1791,29 @@ ul .text-paragraph::after {
 }
 
 .footer-contacts-content .button {
+  display: block;
   padding: 17px 44px 15px 44px;
 }
 
 .footer-social {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 1100px;
-  padding: 68px 0;
-  margin-left: 80px;
+  width: 70%;
+  padding: 108px 240px 68px 140px;
+  margin: 0 auto;
+}
+
+.footer-social-wrap {
+  display: inline-block;
 }
 
 .footer-social-list {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  padding: 0;
   width: 261px;
+  padding: 0;
 }
 
 .footer-social-item a {
@@ -1813,8 +1822,8 @@ ul .text-paragraph::after {
   justify-content: center;
   width: 81px;
   height: 81px;
-  border-radius: 50%;
   background-color: var(--basic-Shape-2);
+  border-radius: 50%;
 }
 
 .social-button path:hover,
@@ -1838,20 +1847,22 @@ ul .text-paragraph::after {
 }
 
 .footer-friendship {
-
+  display: inline-block;
+  width: 660px;
 }
+
 .footer-friendship-title {
+  margin-top: 16px;
+  margin-bottom: 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-black);
-  margin-top: 16px;
-  margin-bottom: 0;
 }
 
 .footer-friendship-sub {
+  margin-top: 16px;
   font-size: 16px;
   line-height: 22px;
-  margin-top: 16px;
   color: var(--basic-Ford-Midnight-Gray);
 }
