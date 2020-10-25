@@ -46,8 +46,11 @@
   --basic-Ford-Midnight-Gray: #444444;
   --basic-Mothe-Gray: #4D4D4D;
   --basic-Krylon-Classic-Gray: #666666;
+  --basic-Gray-B: #ababab;
   --basic-light-gray: #A6A6A6;
   --basic-Shape-2: #E1E1E1;
+  --basic-American-Silver: #cfcfcf;
+  --basic-Very-light-gray: #f1f1f1;
 }
 
 body {
@@ -1254,7 +1257,7 @@ label {
 */
 
 
-/* header #2*/
+/* header */
 
 .header {
   padding-top: 49px;
@@ -1355,7 +1358,7 @@ label {
   padding: 0 10px;
 }
 
- /* section-hero */
+ /* hero */
 
 .hero{
   background-color: var(--basic-Revell-32164);
@@ -1405,10 +1408,10 @@ label {
 .circle-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: -13px;
+  top: -12px;
   left: 5px;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background-image: url("../img/ellipse.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1435,6 +1438,14 @@ label {
   height: 18px;
 }
 
+.hero-catalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 72px 0 108px 0;
+}
+
 /* buttons */
 
 .button {
@@ -1449,6 +1460,7 @@ label {
   color: var(--basic-White);
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .button-red {
@@ -1496,7 +1508,475 @@ label {
   background-color: var(--basic-yellow-C);
 }
 
-/* section-services */
+.button-gray {
+  padding: 17px 90px;
+  color: var(--basic-black);
+  border: none;
+}
+
+.button-gray:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-Revell-B);
+}
+
+.button-gray:focus,
+.button-gray:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+  background-color: var(--basic-Revell-C);
+  box-shadow: inset 0 3px 0 var(--basic-American-Silver);
+}
+
+/* catalog */
+
+.catalog-page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 140px;
+  margin-top: 55px;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-title {
+  margin: 0;
+}
+
+.sort-title,
+.catalog-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.sort-item {
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.sort-title,
+.sort-item,
+.catalog-item-title {
+  text-transform: uppercase;
+}
+
+.sort-list {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 359px;
+  margin: 0;
+  list-style: none;
+}
+
+.sort-list  li {
+  margin-right: 25px;
+}
+
+.sort-item::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 369px;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/Shape1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  fill: var(--basic-black);
+}
+
+.sort-item::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 387px;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/Shape2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  fill: var(--basic-black);
+}
+
+.sort-item:hover {
+  color: var(--basic-black);
+  fill: var(--basic-black);
+  opacity: 0.6;
+}
+
+.sort-item:focus,
+.sort-item:active {
+  color: var(--basic-black);
+  fill: var(--basic-black);
+  opacity: 1;
+}
+
+.catalog-slides {
+  margin-top: 49px;
+}
+
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-item {
+  position: relative;
+  width: 358px;
+  height: 618px;
+  margin-bottom: 30px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--basic-Revell-32164);
+  border-radius: 5px;
+  box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+}
+
+.catalog-item-card {
+  position: absolute;
+  display: none;
+  top: 402px;
+  padding: 26px 53px 44px 52px;
+  text-align: center;
+  background-color: var(--basic-Revell-32164);
+  border-radius: 0 0 5px 5px;
+}
+
+.catalog-item-card .button {
+  display: block;
+  margin: 0 auto;
+  padding: 17px 50px;
+}
+
+.catalog-item:hover {
+  background-color: var(--basic-Mothe-Gray);
+}
+
+.catalog-item:hover .catalog-item-card {
+  display: block;
+}
+
+.catalog-image img{
+  position: relative;
+  border-radius: 0 0 5px 5px;
+}
+
+.catalog-item-card .button-red:hover {
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-B);
+}
+
+.catalog-item-card .button-red:focus,
+.catalog-item-card .button-red:active {
+  color: var(--basic-White);
+  background-color: var(--basic-Coral-C);
+  border: none;
+}
+
+.catalog-item-title {
+  cursor: pointer;
+}
+
+.catalog-item-title:hover {
+  color: var(--basic-Fiery-Coral);
+}
+
+.catalog-item-title:focus,
+.catalog-item-title:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.catalog-item-desc {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-Krylon-Classic-Gray);
+}
+
+.catalog-circles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  height: 14px;
+  padding: 14px 286px 14px 16px;
+}
+
+.catalog-circle {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: var(--basic-White);
+  border-radius: 50%;
+}
+
+/* Pagination */
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-item a,
+.pagination-item-current a,
+.pagination-item-last a {
+  display: block;
+  margin-right: 11px;
+  color: var(--basic-black);
+  background-color: var(--basic-Revell-32164);
+  border-radius: 3px;
+}
+
+.pagination-item a {
+  padding: 17px 22px 15px 22px;
+}
+
+.pagination-item-last a{
+  padding: 17px 77px 15px 78px;
+}
+
+.pagination-item a:hover,
+.pagination-item-last a:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-Revell-B);
+}
+
+.pagination-item a:focus,
+.pagination-item a:active,
+.pagination-item-last a:focus,
+.pagination-item-last a:active {
+  color: var(--basic-black);
+  background-color: var(--basic-Revell-C);
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  opacity: 0.3;
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  padding: 14px 19px 12px 19px;
+  color: var(--basic-black);
+  background-color: var(--basic-White);
+  border: 3px solid var(--basic-Revell-C);
+}
+
+/*filters */
+
+.filters-wrap {
+  width: 260px;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-Revell-32164);
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--basic-green);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  background-color: var(--basic-Gray-B);
+  border: 8px solid var(--basic-White);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--basic-American-Silver);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  color: var(--basic-black-A);
+  background: var(--basic-Very-light-gray);
+  border: none;
+  border-radius: 5px;
+}
+
+.filter-option label {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--basic-black-A);
+}
+
+.filter-list-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 99px;
+  list-style: none;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  margin-left: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -5px;
+  width: 18px;
+  height: 18px;
+  border: 5px solid var(--basic-Revell-B);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -32px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/Oval.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after,
+.filter-input-radio:hover + label,
+.filter-input-radio:hover + label {
+  color: var(--basic-black);
+  border-color: var(--basic-black);
+  fill: var(--basic-black);
+}
+
+.filter-input-radio:focus + label,
+.filter-input-radio:active + label {
+  color: var(--basic-Mothe-Gray);
+  border-color: var(--basic-Mothe-Gray);
+  fill: var(--basic-Mothe-Gray);
+  opacity: 0.3;
+}
+
+.filter-list-checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 179px;
+  list-style: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--basic-Revell-B);
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -38px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/Shape.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:hover + label::after,
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:hover + label {
+  color: var(--basic-black);
+  border-color: var(--basic-black);
+  fill: var(--basic-black);
+}
+
+.filter-input-checkbox:focus + label,
+.filter-input-checkbox:active + label {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* services */
 
 .services-wrap {
   position: relative;
@@ -1647,7 +2127,7 @@ ul .text-paragraph::after {
   background-color: var(--basic-Revell-32164);
 }
 
-/* section-project */
+/* project */
 
 .project-content {
   position: relative;
@@ -1659,7 +2139,6 @@ ul .text-paragraph::after {
   grid-template-columns: repeat(4, 1fr);
   padding: 0;
   list-style-type: none;
-
 }
 
 .project-item .project-logo1,
@@ -1743,7 +2222,6 @@ ul .text-paragraph::after {
   justify-content: space-around;
   padding-top: 54px;
   width: 65%;
-
 }
 
 .footer-contacts-content {
