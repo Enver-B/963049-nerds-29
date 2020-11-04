@@ -1087,22 +1087,26 @@ ul .text-paragraph::after {
 }
 
 .footer-contacts {
-  position: relative;
+
   width: 100%;
   background-size: 100%;
 }
 
 .footer-contacts img {
   position: absolute;
+
   width: 100%;
+
   background-size: 100%;
   z-index: -1;
 }
 
 .footer-container {
+
   max-width: 1177px;
   width: 100%;
-  padding: 0 10px;
+  padding: 80px 10px;
+  margin: 0 auto;
 }
 
 .footer-wrap {
@@ -1237,7 +1241,7 @@ ul .text-paragraph::after {
 
 .modal {
   position: fixed;
-  display: flex;
+  display: none; /*flex*/
   justify-content: center;
   align-items: center;
   top: 0;
